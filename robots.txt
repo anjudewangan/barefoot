@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+
+Allow: /
+
+Sitemap: 
