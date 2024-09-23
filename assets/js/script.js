@@ -9231,7 +9231,7 @@ __p+='`),
         t && e.dispatch(Ja(t)),
             i.active || (e.dispatch(es({
                 hasBoundaryNodes: !!document.querySelector(Ii),
-                reducedMotion: document.body.hasAttribute("data-wf-ix-vacation") && window.matchMedia("(prefers-reduced-motion)").matches
+                // reducedMotion: document.body.hasAttribute("data-wf-ix-vacation") && window.matchMedia("(prefers-reduced-motion)").matches
             })),
                 r && (hU(e),
                     fU(),
@@ -13435,5 +13435,3 @@ Webflow.require('ix2').init({
         }]
     }
 });
-
-
