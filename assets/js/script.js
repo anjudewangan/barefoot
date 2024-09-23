@@ -6,6 +6,58 @@
  *   Webflow.push(readyFunction);
  */
 
+$(document).ready(function () {
+    $(".mma-timetable").hide();
+    $(".yoga-timetable").hide();
+    $(".self-defence-timetable").hide();
+
+       // Function to handle tab switching
+       function activateTab(tabId) {
+        // Remove the "active" class from all tabs
+        $("#all-events, #mma, #yoga, #self-defence").removeClass("active");
+
+        // Add the "active" class to the clicked tab
+        $(tabId).addClass("active");
+    }
+
+
+    $("#all-events").on("click", function () {
+        $(".all-events-timetable").show();
+        $(".mma-timetable").hide();
+        $(".yoga-timetable").hide();
+        $(".self-defence-timetable").hide();
+
+        activateTab("#all-events"); 
+    });
+
+    $("#mma").on("click", function () {
+        $(".mma-timetable").show();
+        $(".all-events-timetable").hide();
+        $(".yoga-timetable").hide();
+        $(".self-defence-timetable").hide();
+
+        activateTab("#mma"); 
+    });
+
+    $("#yoga").on("click", function () {
+        $(".yoga-timetable").show();
+        $(".self-defence-timetable").hide();
+        $(".mma-timetable").hide();
+        $(".all-events-timetable").hide();
+
+        activateTab("#yoga"); 
+    });
+
+    $("#self-defence").on("click", function () {
+        $(".self-defence-timetable").show();
+        $(".mma-timetable").hide();
+        $(".yoga-timetable").hide();
+        $(".all-events-timetable").hide();
+
+        activateTab("#self-defence"); 
+    });
+});
+
 (() => {
     var z_ = Object.create;
     var nn = Object.defineProperty;

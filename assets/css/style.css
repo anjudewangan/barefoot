@@ -2241,12 +2241,12 @@ textarea.w-select {
   --white: white;
   --body-font: "Mona Sans Medium", Tahoma, sans-serif;
   --dark: #070708;
-  --purple: #37aeae;
-  --dark-purple: #319b9b;
+  --purple: #F37B06;
+  --dark-purple: #c76605;
   --dark-grey: #2c2c2c;
   --paragraph-font: "Mona Sans", Arial, sans-serif;
   --transparent: rgba(105, 105, 105, 0);
-  --half-opacity-color: rgba(255, 255, 255, .2);
+  --half-opacity-color: rgba(255, 255, 255, .3);
   --half-opaciy-grey: rgba(105, 105, 105, .15);
   --grey: #696969;
   --black: black;
@@ -2613,7 +2613,7 @@ textarea.w-select {
 
 .xl-outlined-text.text-color-white-opacity {
   color: var(--transparent);
-  -webkit-text-stroke-color: rgba(100, 206, 206, 0.67);
+  -webkit-text-stroke-color: rgba(100, 206, 206, 0.3);
   text-transform: uppercase;
 }
 
@@ -2775,11 +2775,6 @@ textarea.w-select {
 
 .service-image.service-image-five {
   background-image: url("../images/course/8.jpg");
-  max-width: 600px;
-}
-
-.service-image.service-image-six {
-  background-image: url("../images/course/7.jpg");
   max-width: 600px;
 }
 
@@ -3499,7 +3494,7 @@ textarea.w-select {
   background-color: var(--dark);
   color: var(--white);
   margin-left: -6px;
-  padding: 20px 30px;
+  padding: 20px 20px;
   font-size: 1.4em;
   line-height: 1;
 }
@@ -4507,11 +4502,6 @@ textarea.w-select {
 }
 
 /* Style */
-.accordion-wrapper {
-  width: 100%;
-  margin-top: 40px;
-}
-
 .accordion-toggle {
   align-items: center;
   display: flex;
@@ -4548,7 +4538,7 @@ textarea.w-select {
 }
 
 
-.accordion-wrapper {
+.accordion {
   text-align: left;
   width: 60%;
   margin-top: 60px;
@@ -4556,7 +4546,7 @@ textarea.w-select {
   margin-right: auto;
 }
 
-.accordion {
+.accordion-item {
   border: 1px solid var(--gray);
   background-color: var(--light-black);
   border-radius: 20px;
@@ -4565,7 +4555,38 @@ textarea.w-select {
   overflow: hidden;
 }
 
-.accordion-toggle {
+.accordion-button {
+  border: 1px solid var(--gray);
+  background-color: var(--light-black);
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: var(--font-family--oswald);
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.accordion-body {
+  border: 1px solid var(--gray);
+  background-color: var(--light-black);
+  color: var(--white-800);
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.accordion-header {
   border-radius: 0;
   justify-content: space-between;
   align-items: center;
@@ -4592,8 +4613,8 @@ textarea.w-select {
   font-weight: 500;
 }
 
-.accordion-icon {
-  color: #fff;
+.accordion-button:not(.collapsed)::after {
+  color: var(--white);
 }
 
 .accordion-list {
@@ -5036,7 +5057,7 @@ textarea.w-select {
 }
 
 .home_features-list-1_list {
-  grid-column-gap: 3rem;
+  grid-column-gap: 1rem;
   grid-row-gap: 4rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
@@ -5093,7 +5114,7 @@ textarea.w-select {
   margin-top: 0;
   margin-bottom: 0;
   font-family: Lato, sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -5157,12 +5178,12 @@ textarea.w-select {
 }
 
 .quick-timetable .timetable-category ul li:hover {
-  color: #37aeae;
+  color: var(--purple);
 }
 
 .quick-timetable .timetable-category ul li.active {
-  color: #37aeae;
-  border-bottom: 1px solid #37aeae;
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
 }
 
 .quick-timetable .timetable-category ul li:first-child {
@@ -5188,8 +5209,8 @@ textarea.w-select {
   position: absolute;
   left: 0;
   top: 2px;
-  color: #37aeae;
-  border: 1px solid #37aeae;
+  color: var(--purple);
+  border: 1px solid var(--purple);
   -webkit-border-radius: 50%;
   border-radius: 50%;
   width: 30px;
@@ -5215,7 +5236,7 @@ textarea.w-select {
 
 .quick-timetable .timetable-navigation .nav:hover {
   color: #fff;
-  background: #37aeae;
+  background: var(--purple);
 }
 
 .quick-timetable .timetable-week {
@@ -5243,7 +5264,7 @@ textarea.w-select {
 .quick-timetable .timetable-week .timetable-column .column-header {
   height: 70px;
   line-height: 20px;
-  background-color: #37aeae;
+  background-color: var(--purple);
   color: #fff;
   font-weight: 400;
   text-align: center;
@@ -5372,7 +5393,7 @@ textarea.w-select {
 
 .quick-timetable .timetables-calendar .calendar-table tr th {
   height: 70px;
-  background-color: #37aeae;
+  background-color: var(--purple);
   color: #fff;
   font-weight: 500;
   text-align: center;
@@ -5411,7 +5432,7 @@ textarea.w-select {
 }
 
 .quick-timetable .timetables-calendar .calendar-table .calendar-day.weekend .day-num {
-  color: #37aeae;
+  color: var(--purple);
 }
 
 .quick-timetable .timetables-calendar .calendar-table .calendar-day.today {
@@ -5420,7 +5441,7 @@ textarea.w-select {
 
 .quick-timetable .timetables-calendar .calendar-table .calendar-day.today .day-num {
   color: #fff;
-  background: #37aeae;
+  background: var(--purple);
   border-radius: 100%;
   width: 22px;
   font-size: 12px;
@@ -5461,7 +5482,7 @@ textarea.w-select {
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
-  background-color: #37aeae;
+  background-color: var(--purple);
   color: #fff;
   font-size: 15px;
   font-weight: 500;
