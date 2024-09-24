@@ -4587,7 +4587,6 @@ textarea.w-select {
 }
 
 .accordion-header {
-  border-radius: 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
