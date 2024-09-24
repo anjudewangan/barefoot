@@ -607,6 +607,18 @@ label {
   display: block;
 }
 
+#Contact-form .input,
+#Contact-form .select {
+  width: 50%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .w-input:-moz-placeholder,
 .w-select:-moz-placeholder {
   color: #999;
@@ -2290,7 +2302,7 @@ textarea.w-select {
   flex-flow: column;
   justify-content: flex-end;
   height: 100vh;
-  padding-bottom: 3rem;
+  padding-bottom: 10rem;
   display: flex;
   position: relative;
   overflow: visible;
@@ -2394,10 +2406,6 @@ textarea.w-select {
 .space-large {
   width: 3.5rem;
   height: 3.5rem;
-}
-
-.cta-container {
-  padding-left: 160px;
 }
 
 .slash-line-long {
@@ -2714,7 +2722,7 @@ textarea.w-select {
   justify-content: center;
   align-self: auto;
   width: 100%;
-  padding: 80px 0;
+  padding: 50px 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -2728,7 +2736,7 @@ textarea.w-select {
   justify-content: center;
   align-self: auto;
   width: 100%;
-  padding: 80px 0;
+  padding: 50px 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -2780,10 +2788,17 @@ textarea.w-select {
 
 .large-number {
   text-align: center;
-  width: 30%;
+  width: 50%;
   font-family: Mona Sans Condensed, Impact, sans-serif;
-  font-size: 6rem;
+  font-size: 9rem;
   line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-number-week {
+  font-size: 28rem;
 }
 
 .large-number.text-color-white {
@@ -2800,12 +2815,16 @@ textarea.w-select {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   flex-flow: column;
-  width: 800px;
+  width: 60%;
   display: flex;
 }
 
 .service-heading-and-description ul li {
   color: var(--white);
+}
+
+.service-heading-and-description ul {
+  padding-left: 0;
 }
 
 .heading-h3 {
@@ -3513,7 +3532,6 @@ textarea.w-select {
 .nav.nav-text-small.background-color-dark.text-color-white.last-nav-button {
   margin-left: -5px;
   margin-right: -10px;
-  padding-right: 40px;
 }
 
 .brand {
@@ -3918,7 +3936,7 @@ textarea.w-select {
   }
 
   .logo {
-    height: 20px;
+    height: 40px;
   }
 
   .menu-button {
@@ -3972,14 +3990,14 @@ textarea.w-select {
 
 @media screen and (max-width: 479px) {
   .hero-section {
-    background-position: 0 0, 70%;
+    background-position: 0 0, 90%;
     justify-content: flex-end;
     align-items: center;
     padding-top: 0;
   }
 
   .heading-h1 {
-    font-size: 5.7em;
+    font-size: 4.7em;
   }
 
   .padding-large-global.padding-top-large-xl.padding-bottom-medium {
@@ -3987,6 +4005,10 @@ textarea.w-select {
     padding-left: 2rem;
     padding-right: 2rem;
     overflow: hidden;
+  }
+
+  .cta.text-small {
+    padding: 15px 20px;
   }
 
   .text-medium.text-color-white {
@@ -4004,7 +4026,7 @@ textarea.w-select {
   }
 
   .cta.text-small.background-color-purple {
-    font-size: 1.6em;
+    font-size: 1em;
   }
 
   .cta.text-small.background-color-purple:hover {
@@ -4063,6 +4085,11 @@ textarea.w-select {
     line-height: 1.4;
   }
 
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   .text-small.text-color-white.service-paragraph-text {
     font-size: 1.6em;
   }
@@ -4082,13 +4109,13 @@ textarea.w-select {
 
   .xl-outlined-text-warpper.service-xl-outlined {
     top: auto;
-    bottom: 16rem;
+    bottom: 14rem;
     left: 2rem;
   }
 
   .xl-outlined-text-warpper.about-xl-outlined {
     top: auto;
-    bottom: 140%;
+    bottom: 130%;
     left: 1rem;
   }
 
@@ -4172,10 +4199,30 @@ textarea.w-select {
     margin-top: 20px;
   }
 
+  .service-image.service-image-five {
+    background-position: 50% 25%;
+  }
+
+  .service-image.service-image-four {
+    background-position: 50% 25%;
+  }
+
+  .service-image.service-image-three {
+    background-position: 50% 25%;
+  }
+
+  .service-image.service-image-two {
+    background-position: 50% 24%;
+  }
+
+  .service-image.service-image-one {
+    background-position: 50% 33%;
+  }
+
   .large-number.text-color-white,
   .large-number.text-color-purple {
     width: auto;
-    font-size: 5.7rem;
+    font-size: 4.7rem;
   }
 
   .service-heading-and-description {
@@ -4185,7 +4232,7 @@ textarea.w-select {
 
   .heading-h3.text-color-white,
   .heading-h3.text-color-purple {
-    font-size: 4.3em;
+    font-size: 3.3em;
   }
 
   .padding-large-global-xl {
@@ -4259,6 +4306,14 @@ textarea.w-select {
     background-position: 50% 0;
     width: 100%;
     height: 400px;
+  }
+
+  .service-heading-and-description {
+    max-width: 325px;
+  }
+
+  .accordion {
+    width: 100% !important;
   }
 
   .testimonials-section.background-color-purple.padding-bottom-large {
@@ -4509,13 +4564,8 @@ textarea.w-select {
 
 .contact-detail-div {
   justify-content: flex-start;
-  align-items: center;
-}
-
-.price-grid {
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 40px;
+  align-items: start;
+  display: flex;
 }
 
 .price-box,
@@ -4541,17 +4591,15 @@ textarea.w-select {
 .accordion {
   text-align: left;
   width: 60%;
-  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .accordion-item {
-  border: 1px solid var(--gray);
+  border: none;
   background-color: var(--light-black);
   border-radius: 20px;
   width: 100%;
-  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -4581,9 +4629,11 @@ textarea.w-select {
   overflow: hidden;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
   background-color: var(--purple);
   color: var(--white);
+  box-shadow: none;
 }
 
 .accordion-header {
@@ -4592,42 +4642,6 @@ textarea.w-select {
   width: 100%;
   height: 65px;
   display: flex;
-}
-
-.accordion-toggle.w--open {
-  color: #e0f07a0d;
-  background-color: #e0f07a0d;
-}
-
-.large-paragraph {
-  color: var(--white-800);
-  font-size: 20px;
-}
-
-.large-paragraph.faq-heading {
-  font-family: var(--font-family--oswald);
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  font-weight: 500;
-}
-
-.accordion-button:not(.collapsed)::after {
-  color: var(--white);
-}
-
-.accordion-list {
-  border-style: solid;
-  border-width: 0 1px 1px;
-  border-color: black var(--gray) var(--gray);
-  background-color: var(--light-black);
-  padding: 16px 20px;
-  display: none;
-  position: static;
-}
-
-.accordion-list.w--open {
-  background-color: #0000;
 }
 
 .sub-heading-text {
@@ -4755,6 +4769,12 @@ textarea.w-select {
   padding: 45px 40px;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0
+}
+
 .input {
   border: 1px solid var(--white-900);
   color: var(--white);
@@ -4769,8 +4789,20 @@ textarea.w-select {
   border-color: var(--white-900);
 }
 
-.input::placeholder {
+.select {
+  border: 1px solid var(--white-900);
+  color: var(--white);
+  background-color: #0000;
+  margin-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+
+.input::placeholder,
+.select option {
   color: var(--white-900);
+  background: black;
 }
 
 .input.text-area {
@@ -4900,8 +4932,8 @@ textarea.w-select {
   margin-bottom: 30px;
 }
 
-.price-card ul {
-  margin-bottom: 60px;
+.price-card .price-btn-container {
+  margin-top: 60px;
 }
 
 .paragraph {
@@ -5635,6 +5667,152 @@ textarea.w-select {
 }
 
 #Timetable .heading-h2,
-#Timetable .text-medium.text-color-white {
+#Timetable .text-medium.text-color-white,
+#Price .text-medium.text-color-white,
+#Price .heading-h2,
+#FAQ .text-medium.text-color-white,
+#FAQ .heading-h2 {
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .padding-section-large {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .margin-xxlarge {
+    margin: 0;
+    text-align: center;
+  }
+
+  .home_features-list-1_item:first-child {
+    margin-bottom: -160px;
+  }
+
+  .home_feature-2_component,
+  .home_features-list-1_list {
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+  }
+
+  .margin-small {
+    margin: 1.5rem 0;
+  }
+
+  .section_home_features-list-1 h2 {
+    font-size: 2.25rem;
+  }
+
+  .price-grid {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  price-card .h4-heading {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .padding-section-large {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .home_features-list-1_list {
+    grid-column-gap: 2rem;
+  }
+
+  .price-box,
+  .price-card {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+
+  .home_feature-2_component,
+  .home_features-list-1_list {
+    grid-template-columns: 1fr;
+  }
+
+  price-card .h3-heading {
+    font-size: 32px;
+  }
+
+  price-card .h4-heading {
+    font-size: 28px;
+  }
+
+  .quick-timetable .timetable-category ul li {
+    margin: 0 10px;
+  }
+
+  .timetable-category ul {
+    padding-left: 0;
+  }
+
+  .copyright-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #Contact-form .input,
+  #Contact-form .select {
+    width: 100%;
+  }
+
+  .contact-container {
+    display: block;
+  }
+
+  .contact-form-div {
+    padding: 20px 10px;
+  }
+}
+
+#Contact .contact-detail-div .contact-icon {
+  margin-right: 15px;
+}
+
+#Contact .contact-detail-div {
+  margin-bottom: 20px;
+}
+
+#Contact .contact-detail-div .social-icons {
+  margin: 0 10px;
+}
+
+.testimonials-section .w-button {
+  background-color: var(--white) !important;
+  color: var(--purple) !important;
+}
+
+.choice-me-section .heading-h4 {
+  text-transform: initial;
+  color: var(--dark);
+}
+
+#Timetable .cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-contact {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--white) !important;
+  font-style: italic;
+}
+
+.number-contact:hover {
+  color: var(--purple) !important;
+}
+
+.service-feature.background-color-purple .h2-heading {
+  color: var(--dark);
+  -webkit-text-stroke-color: var(--dark);
 }
