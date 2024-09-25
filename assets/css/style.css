@@ -575,7 +575,8 @@ button,
 
 .w-form-done {
   text-align: center;
-  background-color: #ddd;
+  background-color: var(--purple);
+  color: var(--white);
   padding: 20px;
   display: none;
 }
@@ -4805,7 +4806,7 @@ textarea.w-select {
   border: 1px solid var(--white);
   background-color: var(--light-black);
   height: 100%;
-  padding: 45px 40px;
+  padding: 10px 40px;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -5834,6 +5835,11 @@ input[type=number]::-webkit-inner-spin-button {
   .course-week-div-last h2 {
     font-size: 23px;
   }
+
+  #qr-popup {
+    top: 100px !important;
+    left: 10% !important;
+  }
 }
 
 #Contact .contact-detail-div .contact-icon {
@@ -5964,4 +5970,53 @@ input[type=number]::-webkit-inner-spin-button {
     transform: scale(1.5);
     opacity: 0;
   }
+}
+
+#qr-popup {
+  display: none;
+  position: fixed;
+  top: 215px;
+  left: 42%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#qr-popup div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+#qr-popup div img {
+  width: 250px;
+  height: 250px;
+}
+
+#close-popup {
+  z-index: 2;
+  background-color: var(--purple);
+  font-family: var(--body-font);
+  flex: 0 auto;
+  order: 0;
+  align-self: flex-start;
+  transition: padding .3s, background-color .3s;
+  display: inline-flex;
+  position: relative;
+  transform: skew(-15deg);
+  padding: 20px 44px;
+  font-size: 2em;
+  color: var(--white);
+}
+
+#close-popup:hover {
+  background-color: var(--dark-purple);
+  padding-left: 60px;
+  padding-right: 60px;
+  color: var(--white);
 }
