@@ -7,12 +7,29 @@
  */
 
 $(document).ready(function () {
+
+
+    // tap top
+    $('#tap-top').on('click', function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 600) {
+            $('.motov4_go_top').fadeIn();
+        } else {
+            $('.motov4_go_top').fadeOut();
+        }
+    });
     $(".mma-timetable").hide();
     $(".yoga-timetable").hide();
     $(".self-defence-timetable").hide();
 
-       // Function to handle tab switching
-       function activateTab(tabId) {
+    // Function to handle tab switching
+    function activateTab(tabId) {
         // Remove the "active" class from all tabs
         $("#all-events, #mma, #yoga, #self-defence").removeClass("active");
 
@@ -20,14 +37,13 @@ $(document).ready(function () {
         $(tabId).addClass("active");
     }
 
-
     $("#all-events").on("click", function () {
         $(".all-events-timetable").show();
         $(".mma-timetable").hide();
         $(".yoga-timetable").hide();
         $(".self-defence-timetable").hide();
 
-        activateTab("#all-events"); 
+        activateTab("#all-events");
     });
 
     $("#mma").on("click", function () {
@@ -36,7 +52,7 @@ $(document).ready(function () {
         $(".yoga-timetable").hide();
         $(".self-defence-timetable").hide();
 
-        activateTab("#mma"); 
+        activateTab("#mma");
     });
 
     $("#yoga").on("click", function () {
@@ -45,7 +61,7 @@ $(document).ready(function () {
         $(".mma-timetable").hide();
         $(".all-events-timetable").hide();
 
-        activateTab("#yoga"); 
+        activateTab("#yoga");
     });
 
     $("#self-defence").on("click", function () {
@@ -54,7 +70,7 @@ $(document).ready(function () {
         $(".yoga-timetable").hide();
         $(".all-events-timetable").hide();
 
-        activateTab("#self-defence"); 
+        activateTab("#self-defence");
     });
 });
 
