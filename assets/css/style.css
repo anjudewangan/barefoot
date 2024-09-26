@@ -4061,12 +4061,6 @@ textarea.w-select {
     color: var(--white);
   }
 
-  .footer-social-icons {
-    position: absolute;
-    left: 37%;
-    bottom: 82px;
-  }
-
   .bottom-footer {
     position: relative;
   }
@@ -5046,7 +5040,7 @@ label {
   color: var(--white-900);
   font-size: 18px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
@@ -5860,7 +5854,7 @@ label {
 }
 
 #Contact .contact-detail-div .social-icons {
-  margin: 0 10px;
+  margin-right: 10px;
 }
 
 .testimonials-section .w-button {

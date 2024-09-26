@@ -148,26 +148,26 @@ $(document).ready(function () {
         // For Core Defend
         if (selectedCourse === 'core') {
             if (selectedPayment === 'single') {
-                qrCodeImg.attr('src', '../assets/images/register/core-single-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/core-single-payment-qr.jpeg');
             } else if (selectedPayment === 'session') {
-                qrCodeImg.attr('src', '../assets/images/register/core-session-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/core-session-payment-qr.jpeg');
             } else if (selectedPayment === 'group') {
-                qrCodeImg.attr('src', '../assets/images/register/core-group-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/core-group-payment-qr.jpeg');
             }
         }
         // For Total Defend
         else if (selectedCourse === 'total') {
             if (selectedPayment === 'single') {
-                qrCodeImg.attr('src', '../assets/images/register/total-single-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/total-single-payment-qr.jpeg');
             } else if (selectedPayment === 'session') {
-                qrCodeImg.attr('src', '../assets/images/register/core-session-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/core-session-payment-qr.jpeg');
             } else if (selectedPayment === 'group') {
-                qrCodeImg.attr('src', '../assets/images/register/total-group-payment-qr.jpeg');
+                qrCodeImg.attr('src', './assets/images/register/total-group-payment-qr.jpeg');
             }
         }
         // For Trial Class (only one payment option)
         else if (selectedCourse === 'trial' && selectedPayment === 'single-session') {
-            qrCodeImg.attr('src', '../assets/images/register/trial-single-session-qr.jpeg');
+            qrCodeImg.attr('src', './assets/images/register/trial-single-session-qr.jpeg');
         }
 
         // Do not show the popup here, will be handled based on discount selection
