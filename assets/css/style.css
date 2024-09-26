@@ -4070,9 +4070,13 @@ textarea.w-select {
   }
 
   .footer-social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 42%;
+    bottom: 82px;
+  }
+
+  .bottom-footer {
+    position: relative;
   }
 
   .cta-container {
@@ -5849,11 +5853,8 @@ input[type=number]::-webkit-inner-spin-button {
     display: block !important;
   }
 
-  .padding-large-global.padding-top-large-xl.padding-bottom-medium {
-    padding-bottom: 0;
-  }
-
-  #Timetable {
+  #Timetable,
+  #Price {
     padding-top: 0;
   }
 
