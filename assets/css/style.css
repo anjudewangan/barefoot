@@ -5996,7 +5996,7 @@ input[type=number]::-webkit-inner-spin-button {
 #qr-popup {
   display: none;
   position: fixed;
-  top: 215px;
+  top: 22%;
   left: 42%;
   width: 100%;
   height: 100%;
