@@ -5091,7 +5091,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (max-width: 767px) {
   .footer-detail-div {
-    padding-top: 80px;
+    padding-top: 20px;
   }
 
   .footer-grid {
@@ -5576,7 +5576,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 10px;
   border-radius: 5px;
   margin-right: 12px;
-  background-color: #ffd15c;
+  background-color: var(--purple);
   display: inline-block;
 }
 
@@ -5840,6 +5840,26 @@ input[type=number]::-webkit-inner-spin-button {
     top: 100px !important;
     left: 10% !important;
   }
+
+  #weekly-view {
+    display: none !important;
+  }
+
+  #list-view {
+    display: block !important;
+  }
+
+  .padding-large-global.padding-top-large-xl.padding-bottom-medium {
+    padding-bottom: 0;
+  }
+
+  #Timetable {
+    padding-top: 0;
+  }
+
+  #FAQ {
+    padding-top: 20px;
+  }
 }
 
 #Contact .contact-detail-div .contact-icon {
@@ -6019,4 +6039,84 @@ input[type=number]::-webkit-inner-spin-button {
   padding-left: 60px;
   padding-right: 60px;
   color: var(--white);
+}
+
+/* Timetable List */
+.quick-timetable .timetable-list .timetable-row {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.quick-timetable .timetable-list .timetable-row:last-child {
+  margin-bottom: 0;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-header {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background-color: var(--purple);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-item {
+  margin-bottom: 10px;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-header .week-day {
+  float: left;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-header .week-time {
+  float: right;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content {
+  padding: 14px 5px;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-title {
+  font-size: 15px;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-title .timetable-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: var(--purple);
+  display: inline-block;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-title .timetable-time {
+  font-weight: 500;
+  margin-right: 5px;
+  color: #838487;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-title .timetable-course {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.quick-timetable .timetable-list .timetable-row .row-content .timetable-title .timetable-trainer {
+  font-weight: 500;
+  font-style: italic;
+  color: #838487;
+}
+
+#weekly-view {
+  display: block;
+}
+
+#list-view {
+  display: none;
 }

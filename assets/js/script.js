@@ -16,16 +16,14 @@ $(document).ready(function () {
             $('.motov4_go_top').fadeOut();
         }
     });
+
+
     $(".mma-timetable").hide();
     $(".yoga-timetable").hide();
     $(".self-defence-timetable").hide();
 
-    // Function to handle tab switching
     function activateTab(tabId) {
-        // Remove the "active" class from all tabs
         $("#all-events, #mma, #yoga, #self-defence").removeClass("active");
-
-        // Add the "active" class to the clicked tab
         $(tabId).addClass("active");
     }
 
@@ -63,6 +61,52 @@ $(document).ready(function () {
         $(".all-events-timetable").hide();
 
         activateTab("#self-defence");
+    });
+
+    // Mobile view Timetable
+    $(".mma-timetable-res").hide();
+    $(".yoga-timetable-res").hide();
+    $(".self-defence-timetable-res").hide();
+
+    function activateTab(tabId) {
+        $("#all-events-res, #mma-res, #yoga-res, #self-defence-res").removeClass("active");
+        $(tabId).addClass("active");
+    }
+
+    $("#all-events-res").on("click", function () {
+        $(".all-events-timetable-res").show();
+        $(".mma-timetable-res").hide();
+        $(".yoga-timetable-res").hide();
+        $(".self-defence-timetable-res").hide();
+
+        activateTab("#all-events-res");
+    });
+
+    $("#mma-res").on("click", function () {
+        $(".mma-timetable-res").show();
+        $(".all-events-timetable-res").hide();
+        $(".yoga-timetable-res").hide();
+        $(".self-defence-timetable-res").hide();
+
+        activateTab("#mma-res");
+    });
+
+    $("#yoga-res").on("click", function () {
+        $(".yoga-timetable-res").show();
+        $(".self-defence-timetable-res").hide();
+        $(".mma-timetable-res").hide();
+        $(".all-events-timetable-res").hide();
+
+        activateTab("#yoga-res");
+    });
+
+    $("#self-defence-res").on("click", function () {
+        $(".self-defence-timetable-res").show();
+        $(".mma-timetable-res").hide();
+        $(".yoga-timetable-res").hide();
+        $(".all-events-timetable-res").hide();
+
+        activateTab("#self-defence-res");
     });
 
 
