@@ -6,4 +6,4 @@ Disallow: /tmp/
 
 Allow: /
 
-Sitemap: 
+Sitemap: https://barefoot.org.in/sitemap.html

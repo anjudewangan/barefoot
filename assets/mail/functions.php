@@ -45,14 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p><strong>How did you hear about us?:</strong> $aboutUs</p>
         ";
 
-        // Send emailF
+        // Send email
         $mail->send();
 
-        header("Location: ../../course_selection.html");
-        exit;
+        // Return success message
+        echo json_encode(['status' => 'success', 'message' => 'Form submitted successfully!']);
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        // Return error message
+        echo json_encode(['status' => 'error', 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
     }
 } else {
-    echo 'Invalid request method.';
+    echo json_encode(['status' => 'error', 'message' => 'Invalid request method.']);
 }

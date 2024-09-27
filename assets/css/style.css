@@ -2324,8 +2324,8 @@ textarea.w-select {
 .padding-large-global {
   width: 100%;
   padding-bottom: 0;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .padding-large-global.padding-top-large-xl {
@@ -2466,7 +2466,7 @@ textarea.w-select {
 }
 
 .about-trainer-info-wrapper {
-  width: 600px;
+  width: 55%;
 }
 
 .heading-h2 {
@@ -2810,9 +2810,17 @@ textarea.w-select {
   font-size: 28rem;
 }
 
-.large-number-week-last {
+.large-number-week-last span {
   width: 40%;
-  font-size: 9rem;
+  font-size: 13rem;
+  line-height: 0;
+}
+
+.large-number-week-last .middle-span {
+  font-size: 5rem;
+  position: absolute;
+  top: 45%;
+  left: 134px;
 }
 
 .large-number.text-color-white {
@@ -5135,7 +5143,7 @@ label {
 .home_features-list-1_item {
   text-align: start;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   width: 100%;
   display: flex;
   /* background-color: #1d232a;
@@ -5388,7 +5396,7 @@ label {
 }
 
 .quick-timetable .timetable-week .timetable-column .column-content .timetable-item .timetable-title h4 {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 13px;
   color: #171717;
   font-weight: 600;
@@ -5803,9 +5811,20 @@ label {
     display: none;
   }
 
-  .large-number-week-last {
+  .large-number-week-last span {
     width: 100%;
     font-size: 5.5rem;
+  }
+
+  .large-number-week-last .middle-span {
+    font-size: 2rem;
+    position: inherit;
+  }
+
+  .large-number-week-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .price-card .h3-heading {

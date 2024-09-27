@@ -109,6 +109,43 @@ $(document).ready(function () {
         activateTabRes("#self-defence-res");
     });
 
+    // Form submission
+    document.getElementById('Contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Get the success and error message containers
+        const successMessage = document.querySelector('.success-message');
+        const errorMessage = document.querySelector('.w-form-fail');
+        const formContainer = document.getElementById('Contact-form'); // Form to hide after submission
+
+        // Hide any previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+
+        // Send the form data via AJAX using fetch
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json()) // Expecting a JSON response
+            .then(data => {
+                if (data.status === 'success') {
+                    formContainer.style.display = 'none'; // Hide the form
+                    successMessage.style.display = 'block'; // Show the success message
+                } else {
+                    errorMessage.style.display = 'block'; // Show the error message if not successful
+                }
+            })
+            .catch(error => {
+                formContainer.style.display = 'none'; // Hide the form in case of network error
+                errorMessage.style.display = 'block'; // Show the error message
+            });
+    });
+
+
 
     // Register Form
     var selectedCourse = '';
@@ -139,6 +176,7 @@ $(document).ready(function () {
             paymentCourse.append('<option value="single-session">Single Session Payment</option>');
         }
     });
+
 
     // Handle Payment Course Selection and Display QR Code
     $('#payment-course').on('change', function () {
